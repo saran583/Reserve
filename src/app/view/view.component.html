@@ -1,0 +1,43 @@
+<p>All Bookings</p>
+<div *ngFor="let item of arrayOne()">
+<mat-divider></mat-divider>
+<mat-card>
+<mat-card-title>
+{{value[item]["Name"]}}
+</mat-card-title>
+<mat-card-subtitle>{{value[item]["Meeting"]}}</mat-card-subtitle>
+<mat-card-content>The conference room is booked:{{value[0]["Tower"]}},{{value[0]["Floor"]}},{{value[0]["Wing"]}},{{value[0]["Date"]}}</mat-card-content>
+<mat-card-actions>
+    <button (click)="Deletedoc(value[item]['UID'])" mat-button>Cancel</button>
+  </mat-card-actions>
+</mat-card>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+</div>
+
+<!-- <div >
+        <mat-divider ></mat-divider>
+        <mat-card >
+        <mat-card-title>
+        {{value[1]["Name"]}}
+        </mat-card-title>
+        <mat-card-subtitle>{{value[1]["Meeting"]}}</mat-card-subtitle>
+        <mat-card-content>The conference room is booked:{{value[1]["Tower"]}},{{value[1]["Floor"]}},{{value[1]["Wing"]}},{{value[1]["Date"]}}</mat-card-content>
+        </mat-card>
+        <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+</div>
+
+
+<div >
+    <mat-divider></mat-divider>
+    <mat-card>
+        <mat-card-title>
+            {{value[2]["Name"]}}
+        </mat-card-title>
+        <mat-card-subtitle>{{value[2]["Meeting"]}}</mat-card-subtitle>
+        <mat-card-content>The conference room is booked:{{value[2]["Tower"]}},{{value[2]["Floor"]}},{{value[2]["Wing"]}},{{value[2]["Date"]}}</mat-card-content>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
+</div> -->

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Reserve",
+      "public": "dist/Reserve",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

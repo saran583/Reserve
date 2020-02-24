@@ -1,0 +1,220 @@
+<p  *ngIf="name">Hello {{name}}</p>
+<table style="width:100%">
+
+  <tr>
+
+    <td> 
+
+        <mat-divider></mat-divider> 
+
+        <mat-form-field class="example-full-width">
+
+          <mat-label> Name..</mat-label>
+
+          <input matInput  [(ngModel)]=name>
+
+        </mat-form-field>
+       
+        
+
+      </td>
+
+
+    <td> 
+
+        <mat-divider></mat-divider> 
+
+        <mat-form-field class="example-full-width">
+
+          <mat-label>Meeting Name..</mat-label>
+
+          <input matInput  [(ngModel)]=Meeting>
+
+        </mat-form-field>
+        
+      </td>
+
+     
+      </tr>
+
+      
+
+      <tr>
+
+        <td>
+
+          <mat-form-field>
+
+            <mat-label>Select your tower</mat-label>
+
+            <mat-select [(value)]=val>
+
+              <mat-option *ngFor="let tow of Towers" [value]=tow  >
+
+                {{tow}}
+
+              </mat-option>
+
+            </mat-select>
+
+          </mat-form-field>
+
+        </td>
+
+        <td>
+
+          <mat-form-field>
+
+            <mat-label>Select the Floor</mat-label>
+
+            <mat-select [(value)]=val1>
+
+              <mat-option *ngFor="let floor of Floors" [value]=floor  >
+
+                {{floor}}
+
+              </mat-option>
+
+            </mat-select>
+
+          </mat-form-field>
+
+        </td>
+
+        <td>
+
+          <mat-form-field>
+
+            <mat-label>Select the wing</mat-label>
+
+            <mat-select [(value)]=val2>
+
+              <mat-option *ngFor="let win of Wings" [value]=win  >
+
+                {{win}}
+
+              </mat-option>
+
+            </mat-select>
+
+          </mat-form-field>
+
+        </td>
+
+        <td>
+
+          <mat-form-field>
+
+            <mat-label >Choose a date</mat-label>
+
+            <input matInput [matDatepicker]="picker" [(ngModel)]=val3 disabled>
+
+            <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
+
+            <mat-datepicker #picker disabled="false"></mat-datepicker>
+
+          </mat-form-field>
+
+        </td>
+
+        <td>
+          <mat-form-field>
+            <table style="width:100%">
+              <tr>
+            <td>
+           <mat-label>Hours</mat-label>
+
+            <mat-select [(value)]=hours>
+
+              <mat-option *ngFor="let time of hour" [value]=time>
+
+                {{time}}
+
+              </mat-option>
+              
+            </mat-select>
+          </td>
+            <td>
+            <mat-label>minutes</mat-label>
+            
+            <mat-select [(value)]=minute>
+
+              <mat-option *ngFor="let times of min" [value]=times>
+
+                {{times}}
+
+              </mat-option>
+
+            </mat-select>
+          </td>
+          </tr>
+          </table>
+
+          </mat-form-field>
+
+        </td>
+
+      </tr>
+    
+
+    </table>
+
+  
+
+
+
+
+
+
+  <mat-divider></mat-divider>
+
+
+
+
+
+  <mat-card *ngIf="name">Hello {{name}}</mat-card>
+
+
+  <mat-divider></mat-divider>
+
+
+
+  <mat-card>Tower Selection: {{val}}</mat-card>
+
+
+  <mat-divider></mat-divider>
+
+
+  <mat-card>Floor Selection: {{val1}}</mat-card>
+
+
+  <mat-divider></mat-divider>
+
+
+  <mat-card>Wing Selection: {{val2}}</mat-card>
+
+
+  <mat-divider></mat-divider>
+
+  <mat-card>Time: {{hours}}:{{minute}}</mat-card>
+
+
+  <mat-divider></mat-divider>
+  <mat-card *ngIf="val3"> TimeStamp :{{val3}}</mat-card>
+<br>
+<table style="width:100%">
+<tr>
+  <td>
+
+  </td>
+  <td>
+
+  </td>
+  <td>
+<button class="button" (click)="send()">Confirm Booking</button>
+</td>
+
+<td>{{res}}</td>
+</tr>
+
+</table>

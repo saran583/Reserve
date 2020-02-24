@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reserve-5b4b8": {
+      "hosting": {
+        "Reserve": [
+          "reserve-5b4b8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "staging": "reserve-5b4b8"
+  }
+}
