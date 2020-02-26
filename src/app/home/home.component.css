@@ -1,0 +1,83 @@
+
+.card {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(247, 242, 242, 0.2);
+    max-width: 450px;
+    
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: cornsilk;
+  }
+
+  .sides{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    
+
+  }
+  .card1 {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(247, 242, 242, 0.2);
+    max-width: 450px;
+    height: 500px;
+    margin: auto;
+    text-align: left;
+    font-family: arial;
+
+  }
+  .scroll { 
+    border-radius: 25px;
+    margin:4px, 4px; 
+    padding:4px; 
+    width: 300px; 
+    height: 350px; 
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    text-align:justify; 
+} 
+  
+  
+  .size{
+    text-align: right;
+    height: 400px;
+    width: 400px;
+  }
+
+  .image{
+    background-size: cover;
+    height: 40em;
+    background-image:url('https://ak7.picdn.net/shutterstock/videos/12478007/thumb/1.jpg') ;/*https://wallpaperplay.com/walls/full/d/7/e/191282.jpg');*/
+    /* background-image:url('https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Colorful-Circle-Simple-Background-Image-1.jpg'); */
+    /* background-position:50% 50%; */
+  }
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border-radius: 25px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 400px;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  

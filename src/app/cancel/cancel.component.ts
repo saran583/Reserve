@@ -41,11 +41,12 @@ Events:any[]=[
   CreateJson(){
     console.log(this.value["length"])
     for(let i=0;i<this.value["length"];i++){
-    this.date=this.value[i]["Date"].split(" ",3)
+    this.date=this.value[i]["Date"].split("-",3)
     console.log(this.date)
+    
     this.Events[this.buf]={
       
-      start:this.date[2]+'-02-'+this.date[1],
+      start:this.date[2]+'-'+this.date[0]+'-'+this.date[1],
       title:this.value[i]["Time.hour"]+":"+this.value[i]["Time.min"]+" - "+this.value[i]["Meeting"]
     }
     this.buf++;

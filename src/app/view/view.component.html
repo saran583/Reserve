@@ -1,18 +1,20 @@
 <p>All Bookings</p>
-<div *ngFor="let item of arrayOne()">
+<div id = "makeGird">
+<div  *ngFor="let item of arrayOne()">
 <mat-divider></mat-divider>
 <mat-card>
 <mat-card-title>
 {{value[item]["Name"]}}
 </mat-card-title>
 <mat-card-subtitle>{{value[item]["Meeting"]}}</mat-card-subtitle>
-<mat-card-content>The conference room is booked:{{value[0]["Tower"]}},{{value[0]["Floor"]}},{{value[0]["Wing"]}},{{value[0]["Date"]}}</mat-card-content>
+<mat-card-content >The conference room is booked for : Tower {{value[item]["Tower"]}}, {{value[item]["Floor"]}}, {{value[item]["Wing"]}} Wing, {{value[item]["DateView"]}}, Time-{{value[item]["Time.hour"]}}:{{value[item]["Time.min"]}}</mat-card-content>
 <mat-card-actions>
-    <button (click)="Deletedoc(value[item]['UID'])" mat-button>Cancel</button>
+    <button  class="button" (click)="Deletedoc(value[item]['UID'])" >Cancel</button>
   </mat-card-actions>
 </mat-card>
 <mat-divider></mat-divider>
 <mat-divider></mat-divider>
+</div>
 </div>
 
 <!-- <div >
